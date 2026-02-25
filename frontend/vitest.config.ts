@@ -5,11 +5,8 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [vue()],
   test: {
+    include: ['src/__tests__/**/*.test.ts', 'src/**/*.spec.ts'],
     environment: 'happy-dom',
-    coverage: {
-      provider: 'v8',
-      reporter: ['text', 'json', 'html'],
-    },
   },
   resolve: {
     alias: {
