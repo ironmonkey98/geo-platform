@@ -6,14 +6,17 @@
     "dev": "nodemon src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev"
+    "test:collector": "ts-node src/test-collector.ts",
+    "test:doubao": "ts-node src/test-collector.ts doubao",
+    "test:deepseek": "ts-node src/test-collector.ts deepseek",
+    "test:multi": "ts-node src/test-collector.ts multi"
   },
   "dependencies": {
     "express": "^4.18.2",
     "cors": "^2.8.5",
     "helmet": "^7.1.0",
     "morgan": "^1.10.0",
+    "playwright": "^1.40.0",
     "@prisma/client": "^5.8.0"
   },
   "devDependencies": {
